@@ -50,7 +50,7 @@ public class UserController {
 	 */
 		
 	@GetMapping(value = "/users/{companyId}", produces = MediaType.APPLICATION_JSON_VALUE)
-	//@ResponseBody
+	@ResponseBody
 	public List<User> getUsers(@PathVariable Integer companyId,
 			                   @RequestParam(required = false) Boolean state,  
 			                   @RequestParam(required = false) User.Permission permission ){
